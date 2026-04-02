@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:16.4-alpine
+    container_name: postgres-container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: jwtdemo
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - jwtdemo
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - jwtdemo
+    depends_on:
+      - postgres
+
+networks:
+  jwtdemo:
+
+volumes:
+  postgres_data:
