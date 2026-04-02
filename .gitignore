@@ -1,0 +1,37 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE — IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# IDE — VS Code
+.vscode/
+
+# Spring Boot
+*.jar
+*.war
+*.ear
+spring-shell.log
+
+# Secrets
+application-local.yml
+application-local.properties
+*.env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# ZIP files
+*.zip
